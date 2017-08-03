@@ -33,8 +33,8 @@ Before running the sample, fill in the following into your the `config.json` fil
 
 ```json
 {
-  "user_token": "YOUR-USER-TOKEN",
-  "device_ids": "YOUR-DEVICE-ID"
+  "device_id": "YOUR-DEVICE-ID",
+  "device_token": "YOUR-DEVICE-TOKEN"
 }
 ```
 
@@ -76,7 +76,7 @@ WebSocket connection is open ...
 ```bash
 Sending register message payload: 
 
-> Sending Message: {"type": "register", "sdid": "4b2108b18ace444891f747de7b306111", "authorization": "bearer 9817a"}
+> Sending Message: {"type": "register", "sdid": "a9abc1111aaa4445555557abcdef0111", "authorization": "bearer 9817a..."}
 ```
 
 3. Send an action ("setOn" or "setOff") to your Example Simple Smart Light.  We will send a `setOn` action using the tool available in the Devices Dashboard.
