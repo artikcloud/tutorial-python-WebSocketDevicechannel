@@ -1,10 +1,12 @@
-# Tutorial Python WebSocket Device Channel
+# Tutorial Python device channel WebSocket
 
-This start code emulates a smart light connecting to ARTIK Cloud [WebSocket device channel (/websocket)](https://developer.artik.cloud/documentation/data-management/rest-and-websockets.html#device-channel-websocket) endpoint.  By running this sample you will learn to:
+This start code emulates a smart light connecting to ARTIK Cloud [device channel WebSocket (/websocket)](https://developer.artik.cloud/documentation/data-management/rest-and-websockets.html#device-channel-websocket) endpoint.  By running this sample you will learn to:
 
 - Connect to ARTIK Cloud device channel WebSocket url
 - Receive Actions from ARTIK Cloud via the channel
 - Send data messages to ARTIK Cloud via the channel
+
+Consult [Python Firehose WebSocket](https://github.com/artikcloud/tutorial-python-WebSocketFirehose) for how to use Firehose WebSocket.
 
 Consult [An IoT remote control](https://developer.artik.cloud/documentation/tutorials/an-iot-remote-control.html#an-iot-remote-control) for how to build a real smart light using Raspberry Pi.
 
@@ -29,7 +31,7 @@ Consult [An IoT remote control](https://developer.artik.cloud/documentation/tuto
 
 ### Setup Project
 
-Before running the sample, fill in the following into your the `config.json` file:
+1. Before running the sample, fill in the following into your the `config.json` file:
 
 ```json
 {
@@ -38,7 +40,7 @@ Before running the sample, fill in the following into your the `config.json` fil
 }
 ```
 
-In the next section you will install dependencies and run the project.   Verify you are using Python >= 3.5 before continuing.   For example, below output shows python version >= 3.5
+2. In the next section you will install dependencies and run the project.   Verify you are using Python >= 3.5 before continuing.   For example, below output shows python version >= 3.5
 
 ```
 $ python3 --version
@@ -48,13 +50,13 @@ $ pip3 --version
 pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 3.6)
 ```
 
-Install dependencies with following command:
+3. Install dependencies with following command:
 
 ```bash
 $ pip3 install websockets
 ```
 
-##### Run Project
+4. Run Project
 
 ```bash
 $ python3 smartlight.py
@@ -84,7 +86,7 @@ Sending register message payload:
       ![](./screenshots/sc1.png)
    - Select and send the "setOn" action
       ![](./screenshots/sc2.png)
-4. Go back to your running sample application.  You will see it has received a message of type "action.   It also contain an entry with the action "setOn".
+4. Go back to your running sample application.  You will see it has received a message of type action.   It also contains an entry with the action "setOn".
 
 ```bash
 Received message: 
@@ -100,7 +102,7 @@ Send message:
 Received message: {"data":{"mid":"057a3c0c273f4cfa8d4fadc78928f325","cid":"id-1501793569"}}
 ```
 
-6. View “DATA LOGS” (messages) at [My ARTIK Cloud](https://my.artik.cloud), you should see the message with state to true is received by ARTIK Cloud.  
+6. View “DATA LOGS” (messages) at [My ARTIK Cloud](https://my.artik.cloud), you should see the message with state being true is received by ARTIK Cloud.  
 
 ![](./screenshots/sc3.png)
 
